@@ -1,0 +1,69 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='../static/index.css')
+    title Document
+    script(src='../app.js')
+    script(src='../static/read.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+  body(ng-app='myapp' ng-controller='myctrl')
+    div
+      nav
+        .logo
+          img.logoimg(src='../static/Logo1.jpg' alt='logo')
+        ul.options
+          li
+            a(href='/') Home
+          li
+            a(href='/post') Post Content
+          li
+            a(href='/read') Read
+        //- ul.lo
+        //-   li
+        //-     a(href='/') Logout
+    .container
+      .writes
+        .writetits foundation Writes
+        .content
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          | Harum et veritatis excepturi minus
+          | cum quam aperiam delectus, sint magnam quos quia facere debitis, magni explicabo in tempore alias quod
+          | aliquid eligendi, reprehenderit dolorem. Nostrum, facilis dolore? Porro corrupti repellendus. Lorem
+          | ipsum
+          | dolor sit amet consectetur, adipisicing elit. Atque fuga iste quae ad, corrupti sint veniam beatae
+          | eveniet
+          | qui ex animi? Expedita quos officiis reiciendis vel. Esse perspiciatis numquam possimus! Quibusdam
+          | numquam
+          | quasi nisi veniam porro, cumque iste. Numquam, harum!
+      .writes
+        .writetits Vardhan Writes
+        .content
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et
+          | veritatis excepturi minus
+          | cum quam aperiam delectus, sint magnam quos quia facere debitis, magni explicabo in tempore alias quod
+          | aliquid eligendi, reprehenderit dolorem. Nostrum, facilis dolore? Porro corrupti repellendus
+          | assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea exercitationem excepturi eligendi
+          | provident nulla aliquam doloremque assumenda unde esse sunt et perferendis, possimus eaque! Molestias,
+          | est
+          | error? Cupiditate natus reiciendis, pariatur ad dolore unde illum dolor cum ullam earum perferendis?
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nemo, asperiores possimus provident quas
+          | perspiciatis facere iure nihil. Reiciendis ab vero, eius ullam minima non voluptas accusantium id
+          | suscipit
+          | dolorem molestiae fuga quibusdam laudantium eligendi nesciunt quasi beatae. Quia pariatur atque
+          | aspernatur
+          | laborum porro explicabo ut, labore quisquam dolores facere ipsum aperiam reprehenderit fugiat qui magni
+          | maxime delectus asperiores ullam! Voluptate incidunt, voluptatum praesentium cupiditate quasi mollitia
+          | non
+          | ad iste cumque corporis beatae quo? Hic laudantium earum omnis atque illum quod aut, corporis fugiat ea
+          | distinctio! Nam odit sed reprehenderit qui, voluptatibus repellendus, vero unde ab dolor quia tenetur a!
+      
+      each con in x  
+        .writes
+          .writetits #{con.name} writes
+          .content #{con.content} 
+          
+      .footer
+        span Copyright © 2018-2021 VDBitz

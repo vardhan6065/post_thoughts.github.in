@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='../static/index.css')
+    link(rel='stylesheet' href='../static/post.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    title Document
+  body
+    div
+      nav
+        .logo
+          img.logoimg(src='../static/Logo1.jpg' alt='logo')
+        ul.options
+          li
+            a(href='/') Home
+          li
+            a(href='/post') Post Content
+          li
+            a(href='/read') Read
+        //- ul.lo
+        //-   li
+        //-     a(href='/') Logout
+    .form
+      form(method='POST' action='/post')
+        #posttitle Scribble anything meaningfull on your mind
+        input.input(type='text' name='name' placeholder='Enter your first name...')
+        textarea.input(name='content' cols='10' rows='20' placeholder='your content here...')
+        button.input.submit(type='submit') Submit
+    .footer
+      span Copyright © 2018-2021 VDBitz
